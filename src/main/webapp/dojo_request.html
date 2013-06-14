@@ -14,10 +14,10 @@
     <script src="webjars/dojo/1.8.3/dojo/dojo.js"></script>
 
     <script type="text/javascript">
+   		var url="res/normalTxt.txt";
         require(["dojo/request", "dojo/dom", "dojo/dom-construct", "dojo/json", "dojo/on", "dojo/domReady!"],
                 function (request, dom, domConst, JSON, on) {
-                    on(dom.byId("startButton"), "click", function () {
-                        var url="normalTxt.txt";
+                    on(dom.byId("startButton"), "click", function () {                        
                         domConst.place("<p>Requesting...</p>", "output");
                         request(url).then(
                                 function (data) {

@@ -10,22 +10,20 @@
     <link rel="stylesheet" href="webjars/bootstrap/2.3.1/css/bootstrap.css">
     <script src="webjars/jquery/2.0.0/jquery.js"></script>
 </head>
+
 <body>
 <div id="resultDiv"/>
 </body>
 <script type="text/javascript">
-$(document).ready(function () {
-        var getAllUrl = "air-restful-setting.json";
-
+	$(document).ready(function () {
+		var json_url="res/air-restful-setting.json";
         var request = $.ajax({
-            url: getAllUrl,
+            url: json_url,
             dataType:'json'
         });
-
         request.success(function(data, textStatus, jqXHR) {
         	 $('#resultDiv').html("version=" + data.version + " switch1=" + data.switch1);
         });
-
         request.error(function(jqXHR, textStatus, errorThrown) {
             $('#resultDiv').html("jqXHR="+jqXHR+" ,textStatus="+textStatus);
         });

@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <script type="text/javascript">
+<meta charset="utf-8">
+<script type="text/javascript">
         dojoConfig = {parseOnLoad: true}
     </script>
-    <!-- CDN
+<!-- CDN
      <link type="text/css" rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.9.0/dijit/themes/tundra/tundra.css">
      <script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.0/dojo/dojo.js"></script> -->
 
-    <!-- local -->
-    <link rel="stylesheet" href="webjars/bootstrap/2.3.1/css/bootstrap.css">
-    <script src="webjars/jquery/2.0.0/jquery.js"></script>
-</head>
-<body>
-<blockquote class="pull-right">
-    <div id="resultDiv"/>
-</blockquote>
-</body>
+<!-- local -->
+<link rel="stylesheet" href="webjars/bootstrap/2.3.1/css/bootstrap.css">
+<script src="webjars/jquery/2.0.0/jquery.js"></script>
 <script type="text/javascript">
-    $.ajax({
-        url: "normalTxt.txt",
-        beforeSend: function (xhr) {
-            xhr.overrideMimeType("text/plain; charset=utf-8");
-        }
-    }).done(
-    	    function (data) {
-                $('#resultDiv').html(data.replace('\n', '<br>'));
-            });
+	var ajax_url="res/normalTxt.txt";
+	 $(document).ready(function () {
+         $("#submitButton").click(function () {
+		    $.ajax({
+		        url: ajax_url,
+		        beforeSend: function (xhr) {
+		            xhr.overrideMimeType("text/plain; charset=utf-8");
+		        }
+		    }).done(
+		    	    function (data) {
+		                $('#resultDiv').html(data.replace('\n', '<br>'));
+		            });
+      	});
+     });     
 </script>
+</head>
+
+<body>
+<h1>jQuery Ajax Output:</h1>
+<div id="resultDiv"></div>
+<button type="button" id="submitButton">Start</button>
+<br/>
+<a href="index.html" target="_self">Go Home</a>
+<br/>
+</body>
 </html>

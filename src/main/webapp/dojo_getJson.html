@@ -18,13 +18,14 @@
 <div id="resultDiv"/>
 </body>
 <script type="text/javascript">
+	var json_url="res/air-restful-setting.json";
     dojo.ready(function () {
         // Look up the node we'll stick the text under.
         var resultDiv = dojo.byId("resultDiv");
 
         // The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
-            url: "air-restful-setting.json",
+            url: json_url,
             handleAs: "json",
             load: function (data) {
                 resultDiv.innerHTML = "version=" + data.version + " switch1=" + data.switch1;
