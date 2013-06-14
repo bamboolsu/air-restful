@@ -1,0 +1,13 @@
+.DS_Store
+.settings
+.idea
+bin
+target
+.iml
+.classpath
+.project
+.db
+nb-configuration.xml
+.7z
+.zip
+.*~
