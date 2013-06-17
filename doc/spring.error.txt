@@ -4,3 +4,6 @@ Error configuring application listener of class org.springframework.web.context.
 java.lang.ClassNotFoundException: org.springframework.web.context.request.RequestContextListener
 
 2.http://www.slf4j.org/codes.html#version_mismatch
+
+java.lang.IncompatibleClassChangeError: org/springframework/scheduling/quartz/SimpleTriggerBean
+https://jira.springsource.org/browse/SPR-8275 
