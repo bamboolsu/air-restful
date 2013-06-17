@@ -23,14 +23,14 @@ import org.springframework.util.Assert;
  * @version 0.1.0
  * @since 0.0.1
  */
-public class GenericDao<T, ID extends Serializable> {
+public class BaseDao<T, ID extends Serializable> {
 	private Class<T> entityClass;
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
 	@SuppressWarnings("unchecked")
-	public GenericDao() {
+	public BaseDao() {
 		ParameterizedType parameterizedType = (ParameterizedType) getClass().getGenericSuperclass();
 		Type[] types = parameterizedType.getActualTypeArguments();
 		this.entityClass = (Class<T>) types[0];
@@ -58,8 +58,8 @@ public class GenericDao<T, ID extends Serializable> {
 		return q.getResultList();
 	}
 
-	Query createNativeQuery(String queryString, Object... values) {
-		final Query query = entityManager.createNativeQuery(queryString);
+	Query createQuery(String queryString, Object... values) {
+		final Query query = entityManager.createQuery(queryString);
 		if (values != null) {
 			for (int i = 0; i < values.length; i++) {
 				query.setParameter(i + 1, values[i]);
@@ -68,8 +68,8 @@ public class GenericDao<T, ID extends Serializable> {
 		return query;
 	}
 
-	<K> Query createNativeQuery(String queryString, Class<K> className, Object... values) {
-		final Query query = entityManager.createNativeQuery(queryString, className);
+	<K> Query createQuery(String queryString, Class<K> className, Object... values) {
+		final Query query = entityManager.createQuery(queryString, className);
 		if (values != null) {
 			for (int i = 0; i < values.length; i++) {
 				query.setParameter(i + 1, values[i]);
@@ -86,7 +86,7 @@ public class GenericDao<T, ID extends Serializable> {
 	@SuppressWarnings("unchecked")
 	List<T> findByQueryString(final String queryString, final Object... values) {
 		Assert.hasText(queryString);
-		return createNativeQuery(queryString, entityClass, values).getResultList();
+		return createQuery(queryString, entityClass, values).getResultList();
 	}
 
 	public void save(T entity) {

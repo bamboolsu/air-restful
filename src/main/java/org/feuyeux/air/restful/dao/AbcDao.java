@@ -12,5 +12,5 @@ import org.springframework.stereotype.Repository;
  * @since 0.0.1
  */
 @Repository
-public class AbcDao extends GenericDao<AbcEntity, Integer> {
+public class AbcDao extends BaseDao<AbcEntity, Integer> {
 }
