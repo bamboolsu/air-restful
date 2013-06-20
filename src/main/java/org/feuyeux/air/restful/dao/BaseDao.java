@@ -86,7 +86,7 @@ public class BaseDao<T, ID extends Serializable> {
 	@SuppressWarnings("unchecked")
 	List<T> findByQueryString(final String queryString, final Object... values) {
 		Assert.hasText(queryString);
-		return createQuery(queryString, entityClass, values).getResultList();
+		return createQuery(queryString, values).getResultList();
 	}
 
 	public void save(T entity) {
