@@ -1,4 +1,4 @@
-package org.feuyeux.air.restful.model;
+package org.feuyeux.air.jaxrs.domain;
 
 import javax.xml.bind.annotation.XmlAccessOrder;
 import javax.xml.bind.annotation.XmlAccessorOrder;

@@ -1,12 +1,12 @@
-package org.feuyeux.air.restful.service;
+package org.feuyeux.air.jaxrs.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.feuyeux.air.restful.dao.AbcDao;
-import org.feuyeux.air.restful.model.AbcDto;
-import org.feuyeux.air.restful.model.AbcEntity;
+import org.feuyeux.air.jaxrs.dao.AbcDao;
+import org.feuyeux.air.jaxrs.domain.AbcDto;
+import org.feuyeux.air.jaxrs.domain.AbcEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -41,6 +41,8 @@ public class AbcService {
 	}
 
 	private AbcDto entity2Dto(AbcEntity abc) {
+		if (abc == null)
+			return null;
 		final AbcDto dto = new AbcDto();
 		try {
 			dto.setId(abc.getId());

@@ -1,11 +1,11 @@
-package org.creative.air.jersey.api;
+package org.feuyeux.air.jaxrs.resource;
 
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.feuyeux.air.restful.api.AbcApi;
-import org.feuyeux.air.restful.model.AbcDto;
-import org.feuyeux.air.restful.model.AbcReturnDto;
+import org.feuyeux.air.jaxrs.domain.AbcDto;
+import org.feuyeux.air.jaxrs.domain.AbcReturnDto;
+import org.feuyeux.air.jaxrs.resource.AbcApi;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

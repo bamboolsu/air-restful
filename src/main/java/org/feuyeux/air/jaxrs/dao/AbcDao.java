@@ -1,6 +1,6 @@
-package org.feuyeux.air.restful.dao;
+package org.feuyeux.air.jaxrs.dao;
 
-import org.feuyeux.air.restful.model.AbcEntity;
+import org.feuyeux.air.jaxrs.domain.AbcEntity;
 import org.springframework.stereotype.Repository;
 
 /**

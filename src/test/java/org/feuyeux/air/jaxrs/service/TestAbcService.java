@@ -1,4 +1,4 @@
-package org.creative.air.jersey.service;
+package org.feuyeux.air.jaxrs.service;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -6,8 +6,8 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.feuyeux.air.restful.model.AbcDto;
-import org.feuyeux.air.restful.service.AbcService;
+import org.feuyeux.air.jaxrs.domain.AbcDto;
+import org.feuyeux.air.jaxrs.service.AbcService;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;

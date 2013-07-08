@@ -1,4 +1,4 @@
-package org.feuyeux.air.restful.dao;
+package org.feuyeux.air.jaxrs.dao;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;

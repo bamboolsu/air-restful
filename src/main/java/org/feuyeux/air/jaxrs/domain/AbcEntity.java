@@ -1,4 +1,4 @@
-package org.feuyeux.air.restful.model;
+package org.feuyeux.air.jaxrs.domain;
 
 import java.io.Serializable;
 

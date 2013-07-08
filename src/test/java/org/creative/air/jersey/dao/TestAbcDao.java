@@ -2,8 +2,8 @@ package org.creative.air.jersey.dao;
 
 import java.util.List;
 
-import org.feuyeux.air.restful.dao.AbcDao;
-import org.feuyeux.air.restful.model.AbcEntity;
+import org.feuyeux.air.jaxrs.dao.AbcDao;
+import org.feuyeux.air.jaxrs.domain.AbcEntity;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

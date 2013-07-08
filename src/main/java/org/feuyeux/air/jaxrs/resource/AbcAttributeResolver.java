@@ -1,4 +1,4 @@
-package org.feuyeux.air.restful.api;
+package org.feuyeux.air.jaxrs.resource;
 
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -6,8 +6,8 @@ import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 import javax.xml.bind.JAXBContext;
 
-import org.feuyeux.air.restful.model.AbcDto;
-import org.feuyeux.air.restful.model.AbcReturnDto;
+import org.feuyeux.air.jaxrs.domain.AbcDto;
+import org.feuyeux.air.jaxrs.domain.AbcReturnDto;
 
 import com.sun.jersey.api.json.JSONConfiguration;
 import com.sun.jersey.api.json.JSONJAXBContext;

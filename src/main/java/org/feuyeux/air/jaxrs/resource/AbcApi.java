@@ -1,4 +1,4 @@
-package org.feuyeux.air.restful.api;
+package org.feuyeux.air.jaxrs.resource;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.apache.log4j.Logger;
-import org.feuyeux.air.restful.model.AbcDto;
-import org.feuyeux.air.restful.model.AbcReturnDto;
-import org.feuyeux.air.restful.service.AbcService;
+import org.feuyeux.air.jaxrs.domain.AbcDto;
+import org.feuyeux.air.jaxrs.domain.AbcReturnDto;
+import org.feuyeux.air.jaxrs.service.AbcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
