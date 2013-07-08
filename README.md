@@ -18,23 +18,20 @@
 ###TEST
 	junit 4.11
 
+##2013.7.8 VERSION 0.2.0
+	update package name
 ##ROAD MAP
-###0.1.1
+###0.2.1
 	support restful auth
-###0.1.2
+###0.2.2
 	support query result sorted by and pagination
-###0.1.3
+###0.2.3
 	support Rate limiting(HTTP-429 Too Many Requests)
 
 	X-Rate-Limit-Limit The number of allowed requests in the current period
 	X-Rate-Limit-Remaining The number of remaining requests in the current period
 	X-Rate-Limit-Reset The number of seconds left in the current period
-###0.1.4
+###0.2.4
 	support spring restful
-###0.1.5
+###0.2.5
 	support spring data
-
-##DEVELOPMENT TOOLS
-	Eclipse Indigo Service Release 1
-	MariaDB 10.0.1
-	Resin Professional 4.0.36
