@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  * JPA Entity Bean
@@ -39,6 +40,7 @@ public class AbcEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "EMP_SEQ")
 	@SequenceGenerator(name = "EMP_SEQ")
 	@Column(unique = true, nullable = false)
+	@XmlAttribute
 	public Integer getId() {
 		return id;
 	}
@@ -48,6 +50,7 @@ public class AbcEntity implements Serializable {
 	}
 
 	@Column(length = 45)
+	@XmlAttribute
 	public String getName() {
 		return name;
 	}

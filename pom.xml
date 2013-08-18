@@ -10,6 +10,7 @@
 	<name>Air RESTFUL Project</name>
 
 	<properties>
+		<JDK.version>1.7</JDK.version>
 		<junit.version>4.11</junit.version>
 		<jaxb.version>2.2.2</jaxb.version>
 		<jackson.version>1.9.9</jackson.version>
@@ -230,8 +231,8 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
+						<source>${JDK.version}</source>
+						<target>${JDK.version}</target>
 						<encoding>utf-8</encoding>
 					</configuration>
 				</plugin>
